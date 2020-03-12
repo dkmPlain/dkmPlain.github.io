@@ -15,10 +15,14 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="大道至简 - Daniel Meng&#39;s Blog">
-<meta property="og:url" content="http://dkmplain.github.io/archives/index.html">
+<meta name="description" content="使用坚果云做文件同步的时候，如果简单的将Hexo网站文件夹做坚果云同步文件，坚果云会提示不推荐使用坚果云存储代码。坚果云官方微博给出了如下解释：  不少程序员用户，直接将自己的代码放在坚果云同步文件夹中，每次修改自动同步，这样做有几个问题：  坚果云的版本历史是自动保存的，不能添加版本信息。对于代码而言，不方便找回和比对历史代码； 专业的代码管理工具（Git&#x2F;Hg）能够很容易查看用户对所有代码进行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用坚果云Git仓库同步Hexo网站数据">
+<meta property="og:url" content="http://dkmplain.github.io/2020/03/12/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/index.html">
 <meta property="og:site_name" content="大道至简 - Daniel Meng&#39;s Blog">
+<meta property="og:description" content="使用坚果云做文件同步的时候，如果简单的将Hexo网站文件夹做坚果云同步文件，坚果云会提示不推荐使用坚果云存储代码。坚果云官方微博给出了如下解释：  不少程序员用户，直接将自己的代码放在坚果云同步文件夹中，每次修改自动同步，这样做有几个问题：  坚果云的版本历史是自动保存的，不能添加版本信息。对于代码而言，不方便找回和比对历史代码； 专业的代码管理工具（Git&#x2F;Hg）能够很容易查看用户对所有代码进行">
+<meta property="article:published_time" content="2020-03-12T13:08:02.946Z">
+<meta property="article:modified_time" content="2020-03-12T14:37:00.340Z">
 <meta property="article:author" content="Daniel Meng">
 <meta name="twitter:card" content="summary">
 
@@ -51,7 +55,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives | 大道至简 - Daniel Meng&#39;s Blog</title>
+<title>使用坚果云Git仓库同步Hexo网站数据 | 大道至简 - Daniel Meng&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -61,8 +65,8 @@
         fancybox: true,
         animate: ture,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -255,110 +259,213 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-使用坚果云Git仓库同步Hexo网站数据" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2020/03/12/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/" class="article-date">
+      <time datetime="2020-03-12T13:08:02.946Z" itemprop="datePublished">2020-03-12</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用坚果云Git仓库同步Hexo网站数据
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/03/12/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/" class="archive-article-date">
-      <time datetime="2020-03-12T13:08:02.946Z" itemprop="datePublished">03-12</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/12/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/">使用坚果云Git仓库同步Hexo网站数据</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
+    <div class="article-entry" itemprop="articleBody">
+      
           
+        <p>使用坚果云做文件同步的时候，如果简单的将Hexo网站文件夹做坚果云同步文件，坚果云会提示不推荐使用坚果云存储代码。坚果云官方微博给出了如下解释：</p>
+<blockquote>
+<p>不少程序员用户，直接将自己的代码放在坚果云同步文件夹中，每次修改自动同步，这样做有几个问题：</p>
+<ul>
+<li>坚果云的版本历史是自动保存的，不能添加版本信息。对于代码而言，不方便找回和比对历史代码；</li>
+<li>专业的代码管理工具（Git/Hg）能够很容易查看用户对所有代码进行的每次修改，易于分析bug的来源。而坚果云不能提供这样的功能。</li>
+<li>如果将eclipse, Visual Studio等IDE的workspace直接放于坚果云中，假如同步不及时造成冲突，而IDE自动生成文件的冲突无法解决，可能导致IDE无法正常打开。</li>
+<li>编译，重构等自动化工作引发的同步，容易导致大量的带宽占用。</li>
+</ul>
+</blockquote>
+<a id="more"></a>
 
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<p>对于这种问题，坚果云给出了两种方案，一是使用目前国内外成熟的代码托管服务，如下：</p>
+<blockquote>
+<p>国内：coding.net/csdn/开源中国</p>
+<p>国外：bitbucket (免费支持私有)/gitlab/github</p>
+</blockquote>
+<p>第二种方案就是在坚果云的同步文件夹中部署git仓库，使用git同步。具体方法：</p>
+<ol>
+<li><p>坚果云同步文件夹下，例如：Nutstore，创建文件夹。</p>
+<blockquote>
+<p>git\web-host.git (可以是任意xxx.git名称)</p>
+</blockquote>
+</li>
+<li><p>初始化一个裸仓库，即：不含有工作区的仓库。</p>
+<blockquote>
+<p>~\Nutstore\git\web-host.git&gt;git init –bare</p>
+</blockquote>
+</li>
+<li><p>在Hexo网站根目录下创建git仓库。</p>
+<blockquote>
+<p>~\web-host&gt;git init (初始化参考，在目录下创建.git文件夹)</p>
+<p>~\web-host&gt;git add . (#添加所有修改到暂存区，包括添加文件/修改文件/删除文件)</p>
+<p>~\web-host&gt;git commit -m “first” (#提交暂存区到仓库区)</p>
+</blockquote>
+</li>
+<li><p>为Nutstore中的仓库添加别名。</p>
+<blockquote>
+<p>~\web-host&gt;git remote add nutstore ..\Nutstore\git\web-host.git</p>
+</blockquote>
+</li>
+<li><p>将网站数据Push到Nutstore仓库中的master分支。</p>
+<blockquote>
+<p>~\web-host&gt;git push nutstore master</p>
+</blockquote>
+</li>
+<li><p>可以在Nutstore的仓库中定期清理，使用gc命令，减少文件数目节约空间。</p>
+<blockquote>
+<p>例如：~/Nutstore/git/project.git&gt; git gc</p>
+</blockquote>
+</li>
+</ol>
+<p>附：git教程 <a href="https://www.bookstack.cn/books/git-tutorial" target="_blank" rel="noopener">https://www.bookstack.cn/books/git-tutorial</a></p>
+<p>坚果云博客：<a href="http://blog.jianguoyun.com/?p=2729" target="_blank" rel="noopener">http://blog.jianguoyun.com/?p=2729</a>    坚果云+代码管理工具，有效管理您的代码（程序员必读）</p>
+
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2020/03/12/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/">使用坚果云Git仓库同步Hexo网站数据</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Daniel Meng</a></p>
+        <p><span>发布时间:</span>2020-03-12, 21:08:02</p>
+        <p><span>最后更新:</span>2020-03-12, 22:37:00</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2020/03/12/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/" title="使用坚果云Git仓库同步Hexo网站数据">http://dkmplain.github.io/2020/03/12/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://dkmplain.github.io/2020/03/12/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/　　作者: Daniel Meng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2020/03/11/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                    Hexo+Github搭建博客，工具安装及环境配置
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/03/11/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-      <time datetime="2020-03-11T11:49:34.685Z" itemprop="datePublished">03-11</time>
-</a>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/11/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Hexo+Github搭建博客，工具安装及环境配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"使用坚果云Git仓库同步Hexo网站数据　| 大道至简 - Daniel Meng's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
     
+
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/03/10/hello-world/" class="archive-article-date">
-      <time datetime="2020-03-10T15:33:18.676Z" itemprop="datePublished">03-10</time>
-</a>
+</div>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/10/hello-world/">Hello World</a>
-    </h1>
-  
 
-        <div class="article-info info-on-archive">
-          
 
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+
+
 
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2020/03/11/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" title="下一篇: Hexo+Github搭建博客，工具安装及环境配置">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/03/12/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/">使用坚果云Git仓库同步Hexo网站数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/11/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Hexo+Github搭建博客，工具安装及环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/10/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">

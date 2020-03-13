@@ -15,14 +15,14 @@
 
 
 
-<meta name="description" content="一、工具准备 Node.js 环境和npm (Node Package Manager,node包管理器) Git 环境 Hexo">
+<meta name="description" content="一、工具准备 Node.js 环境和npm (Node Package Manager,node包管理器) Git 环境 Hexo  二、开始配置 安装Node.js (版本：12.16.1)，下载：官网地址，国内：镜像地址，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 node -v 来显示软件版本。  Git (版本：2.25)，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+Github搭建博客，工具安装及环境配置">
-<meta property="og:url" content="http://dkmplain.github.io/2020/03/11/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:url" content="http://dkmplain.github.io/2020/03/13/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="大道至简 - Daniel Meng&#39;s Blog">
-<meta property="og:description" content="一、工具准备 Node.js 环境和npm (Node Package Manager,node包管理器) Git 环境 Hexo">
-<meta property="article:published_time" content="2020-03-11T11:49:34.685Z">
-<meta property="article:modified_time" content="2020-03-12T14:37:24.073Z">
+<meta property="og:description" content="一、工具准备 Node.js 环境和npm (Node Package Manager,node包管理器) Git 环境 Hexo  二、开始配置 安装Node.js (版本：12.16.1)，下载：官网地址，国内：镜像地址，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 node -v 来显示软件版本。  Git (版本：2.25)，">
+<meta property="article:published_time" content="2020-03-13T04:41:45.160Z">
+<meta property="article:modified_time" content="2020-03-13T04:15:47.408Z">
 <meta property="article:author" content="Daniel Meng">
 <meta name="twitter:card" content="summary">
 
@@ -269,8 +269,8 @@
       <div class="body-wrap"><article id="post-Hexo+Github搭建博客，工具安装及环境配置" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2020/03/11/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="article-date">
-      <time datetime="2020-03-11T11:49:34.685Z" itemprop="datePublished">2020-03-11</time>
+      <a href="/2020/03/13/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="article-date">
+      <time datetime="2020-03-13T04:41:45.160Z" itemprop="datePublished">2020-03-13</time>
 </a>
 
 
@@ -307,8 +307,6 @@
 <li>Git 环境</li>
 <li>Hexo</li>
 </ul>
-<a id="more"></a>
-
 <h3 id="二、开始配置"><a href="#二、开始配置" class="headerlink" title="二、开始配置"></a>二、开始配置</h3><ol>
 <li><p>安装Node.js (版本：12.16.1)，下载：<a href="https://nodejs.org/" target="_blank" rel="noopener">官网地址</a>，国内：<a href="https://npm.taobao.org/mirrors/node" target="_blank" rel="noopener">镜像地址</a>，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 node -v 来显示软件版本。</p>
 </li>
@@ -329,7 +327,7 @@
 </li>
 </ol>
 <h3 id="三、内容推送到Github"><a href="#三、内容推送到Github" class="headerlink" title="三、内容推送到Github"></a>三、内容推送到Github</h3><ol>
-<li><p>注册Github账户，创建一个Repository。Repository Name必须是URL 根目录从默认值：</p>
+<li><p>注册Github账户，创建一个Repository。Repository Name必须是URL 根目录，默认值：</p>
 <blockquote>
 <p>username.github.io</p>
 </blockquote>
@@ -357,7 +355,7 @@ name = xxx</code></pre></blockquote>
 <p>hexo g</p>
 <p>hexo d (hexo deploy   #部署)</p>
 </li>
-<li><p>输入用户名，密码，部署完成后，可以打开浏览器，输入github的仓库路径，即 <a href="http://xxxx.github.io即可访问。" target="_blank" rel="noopener">http://xxxx.github.io即可访问。</a></p>
+<li><p>输入用户名，密码，部署完成后，可以打开浏览器，输入github的仓库路径，即 <a href="http://xxxx.github.io。" target="_blank" rel="noopener">http://xxxx.github.io。</a></p>
 </li>
 </ol>
 <h3 id="四、配置使用ssh-key免密部署"><a href="#四、配置使用ssh-key免密部署" class="headerlink" title="四、配置使用ssh key免密部署"></a>四、配置使用ssh key免密部署</h3><ol>
@@ -411,13 +409,13 @@ name = xxx</code></pre></blockquote>
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2020/03/11/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Hexo+Github搭建博客，工具安装及环境配置</a></p>
+        <p><span>本文标题:</span><a href="/2020/03/13/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Hexo+Github搭建博客，工具安装及环境配置</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Daniel Meng</a></p>
-        <p><span>发布时间:</span>2020-03-11, 19:49:34</p>
-        <p><span>最后更新:</span>2020-03-12, 22:37:24</p>
+        <p><span>发布时间:</span>2020-03-13, 12:41:45</p>
+        <p><span>最后更新:</span>2020-03-13, 12:15:47</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2020/03/11/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" title="Hexo+Github搭建博客，工具安装及环境配置">http://dkmplain.github.io/2020/03/11/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://dkmplain.github.io/2020/03/11/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/　　作者: Daniel Meng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2020/03/13/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" title="Hexo+Github搭建博客，工具安装及环境配置">http://dkmplain.github.io/2020/03/13/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://dkmplain.github.io/2020/03/13/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/　　作者: Daniel Meng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -429,16 +427,10 @@ name = xxx</code></pre></blockquote>
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2020/03/12/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/">
-                    使用坚果云Git仓库同步Hexo网站数据
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2020/03/10/hello-world/">
-                    Hello World
+                <a href="/2020/03/13/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/">
+                    使用坚果云Git仓库同步Hexo网站数据
                 </a>
             </div>
         
@@ -506,21 +498,19 @@ name = xxx</code></pre></blockquote>
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2020/03/12/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/" title="上一篇: 使用坚果云Git仓库同步Hexo网站数据">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2020/03/10/hello-world/" title="下一篇: Hello World">
+            <a href="/2020/03/13/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/" title="下一篇: 使用坚果云Git仓库同步Hexo网站数据">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/03/12/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/">使用坚果云Git仓库同步Hexo网站数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/11/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Hexo+Github搭建博客，工具安装及环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/10/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/03/13/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Hexo+Github搭建博客，工具安装及环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/13/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/">使用坚果云Git仓库同步Hexo网站数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/13/Hexo%E4%B8%BB%E9%A2%98%E5%8F%8A%E9%A1%B5%E9%9D%A2%E4%BC%98%E5%8C%96/">Hexo主题及页面优化</a></li></ul>
 
 
 

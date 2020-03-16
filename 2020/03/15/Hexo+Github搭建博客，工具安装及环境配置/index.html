@@ -15,21 +15,16 @@
 
 
 
-<meta name="description" content="一、阿里云OSS服务 注册服务，官方链接。付费的原则是按量付费，这个是默认的方式，开通就是使用这种方式。另外有套餐（存储包，一般可选40G）的形式，可以购买包月包年，有点类似我们平时用的手机开户。存储选了套餐，流量还需要另外付费。平时如果存储、访问量小，可以不买套餐。注册后，选择开通OSS服务。">
+<meta name="description" content="一、工具准备 Node.js 环境和npm (Node Package Manager,node包管理器) Git 环境 Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用阿里云OSS服务+PicGo来搭建Hexo博客的图床">
-<meta property="og:url" content="http://dkmplain.github.io/2020/03/13/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%9C%8D%E5%8A%A1+PicGo%E6%9D%A5%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9B%BE%E5%BA%8A/index.html">
+<meta property="og:title" content="Hexo+Github搭建博客，工具安装及环境配置">
+<meta property="og:url" content="http://dkmplain.github.io/2020/03/15/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="大道至简 - Daniel Meng&#39;s Blog">
-<meta property="og:description" content="一、阿里云OSS服务 注册服务，官方链接。付费的原则是按量付费，这个是默认的方式，开通就是使用这种方式。另外有套餐（存储包，一般可选40G）的形式，可以购买包月包年，有点类似我们平时用的手机开户。存储选了套餐，流量还需要另外付费。平时如果存储、访问量小，可以不买套餐。注册后，选择开通OSS服务。">
-<meta property="og:image" content="https://dkm-bucket-1.oss-cn-shanghai.aliyuncs.com/img/Snipaste_2020-03-14_09-43-31.png">
-<meta property="og:image" content="https://dkm-bucket-1.oss-cn-shanghai.aliyuncs.com/img/Snipaste_2020-03-13_22-27-14.png">
-<meta property="og:image" content="https://dkm-bucket-1.oss-cn-shanghai.aliyuncs.com/img/Snipaste_2020-03-14_09-49-04.png">
-<meta property="og:image" content="https://dkm-bucket-1.oss-cn-shanghai.aliyuncs.com/img/Snipaste_2020-03-14_09-53-36.png">
-<meta property="article:published_time" content="2020-03-13T13:42:59.499Z">
-<meta property="article:modified_time" content="2020-03-14T06:20:31.107Z">
+<meta property="og:description" content="一、工具准备 Node.js 环境和npm (Node Package Manager,node包管理器) Git 环境 Hexo">
+<meta property="article:published_time" content="2020-03-15T11:16:29.261Z">
+<meta property="article:modified_time" content="2020-03-13T05:58:23.106Z">
 <meta property="article:author" content="Daniel Meng">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://dkm-bucket-1.oss-cn-shanghai.aliyuncs.com/img/Snipaste_2020-03-14_09-43-31.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -60,7 +55,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>使用阿里云OSS服务+PicGo来搭建Hexo博客的图床 | 大道至简 - Daniel Meng&#39;s Blog</title>
+<title>Hexo+Github搭建博客，工具安装及环境配置 | 大道至简 - Daniel Meng&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -121,46 +116,6 @@
 
 
         
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
-                        
-                        
-                        <li>关于我</li>
-                        
-                    </ul>
-                </div>
-            </div>
-        
 
         <div id="switch-area" class="switch-area">
             <div class="switch-wrap">
@@ -192,33 +147,9 @@
                 </section>
                 
                 
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        
-                    </div>
-                </section>
                 
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/" target="_blank" rel="noopener">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/" target="_blank" rel="noopener">MOxFIVE</a>
-                    
-                    </div>
-                </section>
                 
 
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">专注于前端</div>
-                </section>
                 
             </div>
         </div>
@@ -271,11 +202,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-使用阿里云OSS服务+PicGo来搭建Hexo博客的图床" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Hexo+Github搭建博客，工具安装及环境配置" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2020/03/13/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%9C%8D%E5%8A%A1+PicGo%E6%9D%A5%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9B%BE%E5%BA%8A/" class="article-date">
-      <time datetime="2020-03-13T13:42:59.499Z" itemprop="datePublished">2020-03-13</time>
+      <a href="/2020/03/15/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="article-date">
+      <time datetime="2020-03-15T11:16:29.261Z" itemprop="datePublished">2020-03-15</time>
 </a>
 
 
@@ -290,7 +221,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      使用阿里云OSS服务+PicGo来搭建Hexo博客的图床
+      Hexo+Github搭建博客，工具安装及环境配置
     </h1>
   
 
@@ -307,42 +238,106 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="一、阿里云OSS服务"><a href="#一、阿里云OSS服务" class="headerlink" title="一、阿里云OSS服务"></a>一、阿里云OSS服务</h3><ol>
-<li>注册服务，<a href="https://www.aliyun.com/product/oss" target="_blank" rel="noopener">官方链接</a>。付费的原则是按量付费，这个是默认的方式，开通就是使用这种方式。另外有套餐（存储包，一般可选40G）的形式，可以购买包月包年，有点类似我们平时用的手机开户。存储选了套餐，流量还需要另外付费。平时如果存储、访问量小，可以不买套餐。注册后，选择开通OSS服务。</li>
-</ol>
+        <h3 id="一、工具准备"><a href="#一、工具准备" class="headerlink" title="一、工具准备"></a>一、工具准备</h3><ul>
+<li>Node.js 环境和npm (Node Package Manager,node包管理器)</li>
+<li>Git 环境</li>
+<li>Hexo</li>
+</ul>
 <a id="more"></a>
 
-<ol start="2">
-<li><p>创建Bucket，”桶的概念”，就是存储空间。</p>
-<p><img src="https://dkm-bucket-1.oss-cn-shanghai.aliyuncs.com/img/Snipaste_2020-03-14_09-43-31.png" alt=""></p>
+<h3 id="二、开始配置"><a href="#二、开始配置" class="headerlink" title="二、开始配置"></a>二、开始配置</h3><ol>
+<li><p>安装Node.js (版本：12.16.1)，下载：<a href="https://nodejs.org/" target="_blank" rel="noopener">官网地址</a>，国内：<a href="https://npm.taobao.org/mirrors/node" target="_blank" rel="noopener">镜像地址</a>，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 node -v 来显示软件版本。</p>
 </li>
-<li><p>可以购买一个资源包，40G就可以，选择国内通用。</p>
-<p><img src="https://dkm-bucket-1.oss-cn-shanghai.aliyuncs.com/img/Snipaste_2020-03-13_22-27-14.png" alt=""></p>
+<li><p>Git (版本：2.25)， 下载：<a href="https://git-scm.com/" target="_blank" rel="noopener">官网地址</a>，国内：<a href="https://npm.taobao.org/mirrors/git-for-windows/" target="_blank" rel="noopener">镜像地址</a>， 这里编辑器选择Notepad++，其它选项默认即可。</p>
 </li>
-<li><p>读写权限”公共读”，因为外部网站需要使用HTTP访问到。其余项目默认，点击确定，创建Bucket，然后在阿里云的控制台界面查看AccessKey。</p>
-</li>
-</ol>
-<h3 id="二、上传工具"><a href="#二、上传工具" class="headerlink" title="二、上传工具"></a>二、上传工具</h3><ol>
-<li><p>下载<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">PicGo</a>，安装配置。</p>
-<p><img src="https://dkm-bucket-1.oss-cn-shanghai.aliyuncs.com/img/Snipaste_2020-03-14_09-49-04.png" alt=""></p>
-</li>
-</ol>
-<ul>
-<li><p>KeyId和KeySecret，在阿里云控制台的AccessKey中可以找到。</p>
-</li>
-<li><p>存储空间名，是创建Bucket的名称。</p>
-</li>
-<li><p>存储区域，在Bucket页面可以找到。</p>
-<p><img src="https://dkm-bucket-1.oss-cn-shanghai.aliyuncs.com/img/Snipaste_2020-03-14_09-53-36.png" alt=""></p>
-</li>
-<li><p>然后自定义一个图片的存储路径，例如img/，图片上传后访问的路径就是：</p>
+<li><p>安装Hexo，Win+R打开 Windows Command Line (cmd 命令)，输入：npm install -g hexo-cli，安装完成后，Hexo -v 显示版本。可以参考官网：<a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo.io&gt;zh-cn&gt;docs</a></p>
 <blockquote>
-<p>~/oss-cn-shanghai.aliyuncs.com/img/</p>
+<p>关于hexo-cli：command line interface的缩写。按Hexo官网的安装指南，只安装命令行方式即可。</p>
 </blockquote>
 </li>
-</ul>
-<ol start="2">
-<li>配置完成后，就可以将图片拖入上传区上传图片，图片上传后，在相册中复制链接，将链接拷贝到Markdown编辑器。</li>
+<li><p>在合适的目录下创建网站文件夹，例如：web-host。Win+R -cmd, 切换到web-host目录（空目录，不要有其它文件）。然后输入： hexo init， 初始化站点文件夹。</p>
+</li>
+<li><p>输入：hexo g，生成静态网页，在站点根目录下生成public文件夹，编译.md文件到.html文件。</p>
+</li>
+<li><p>输入：hexo s，启动server。</p>
+</li>
+<li><p>本地浏览器输入：localhost:4000，查看页面。</p>
+</li>
+</ol>
+<h3 id="三、内容推送到Github"><a href="#三、内容推送到Github" class="headerlink" title="三、内容推送到Github"></a>三、内容推送到Github</h3><ol>
+<li><p>注册Github账户，创建一个Repository。Repository Name必须是URL 根目录，默认值：</p>
+<blockquote>
+<p>username.github.io</p>
+</blockquote>
+</li>
+<li><p>修改“_config.yml”文件。站点文件夹web-host下，文件末尾，修改文件内容：</p>
+<blockquote>
+<p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/dkmPlain/dkmPlain.github.io" target="_blank" rel="noopener">https://github.com/dkmPlain/dkmPlain.github.io</a><br>  branch: master</p>
+</blockquote>
+</li>
+<li><p>安装deploy-git，部署命令。npm install hexo-deployer-git –save</p>
+</li>
+<li><p>配置Git自己的用户名和Email地址。</p>
+<blockquote>
+<p>git config –global user.name “xxx”<br>git config –global user.email “<a href="mailto:xxx@gmail.com">xxx@gmail.com</a>“</p>
+</blockquote>
+</li>
+<li><p>也可以直接修改 web-host&gt;deploy_git&gt;.git 目录下的config文件（文件浏览器需要去掉隐藏选项），添加以下内容。</p>
+<blockquote>
+<p>[user]</p>
+<pre><code>email = xxx@gmail.com
+name = xxx</code></pre></blockquote>
+</li>
+<li><p>然后输入命令：</p>
+<p>hexo clean (#清除缓存)</p>
+<p>hexo g</p>
+<p>hexo d (hexo deploy   #部署)</p>
+</li>
+<li><p>输入用户名，密码，部署完成后，可以打开浏览器，输入github的仓库路径，即 <a href="http://xxxx.github.io" target="_blank" rel="noopener">http://xxxx.github.io</a>。</p>
+</li>
+</ol>
+<h3 id="四、配置使用ssh-key免密部署"><a href="#四、配置使用ssh-key免密部署" class="headerlink" title="四、配置使用ssh key免密部署"></a>四、配置使用ssh key免密部署</h3><ol>
+<li><p>确认已经为Git配置了用户名和邮箱地址。如：</p>
+<blockquote>
+<p>git config –global user.name “xxx”<br>git config –global user.email “<a href="mailto:xxx@gmail.com">xxx@gmail.com</a>“</p>
+</blockquote>
+</li>
+<li><p>修改Hexo文件夹的_config.yml配置文件，将Git克隆的方式由HTTP协议URL改为SSH协议URL，如下：</p>
+<blockquote>
+<p>repository: <a href="mailto:git@github.com">git@github.com</a>:username/username.github.io.git</p>
+</blockquote>
+</li>
+<li><p>开始菜单-&gt;git-&gt;git bash，使用git bash命令行，确认是否存在ssh密钥：</p>
+<blockquote>
+<p>Horse@DESKTOP-7OP73RU MINGW64 ~<br>$ cd ~/.ssh<br>bash: cd: /c/Users/Horse/.ssh: No such file or directory</p>
+</blockquote>
+</li>
+<li><p>使用ssh-keygen命令生成github密钥：</p>
+<blockquote>
+<p>ssh-keygen -t rsa -C “<a href="mailto:xxx@gmail.com">xxx@gmail.com</a>“</p>
+</blockquote>
+<p>按提示，默认选项，回车即可。</p>
+<blockquote>
+<p>Horse@DESKTOP-7OP73RU MINGW64 ~<br>$ ssh-keygen -t rsa -C “<a href="mailto:xxx@gmail.com">xxx@gmail.com</a>“<br>Generating public/private rsa key pair.<br>Enter file in which to save the key (/c/Users/Horse/.ssh/id_rsa):<br>Created directory ‘/c/Users/Horse/.ssh’.<br>Enter passphrase (empty for no passphrase):<br>Enter same passphrase again:<br>Your identification has been saved in /c/Users/Horse/.ssh/id_rsa<br>Your public key has been saved in /c/Users/Horse/.ssh/id_rsa.pub<br>The key fingerprint is:<br>SHA256:EFSq1tq78X8cUk1hn86LWBztQvCF6Tj26kr69Y/44A4 <a href="mailto:xxx@gmail.com">xxx@gmail.com</a><br>The key’s randomart image is:<br>+—[RSA 3072]—-+<br>|     .+o=o++.    |<br>|     . = +++ .   |<br>|    . =  o+ +    |<br>|     = .+o.=     |<br>|    o o.So+ +    |<br>|   . o . o.o .   |<br>|    . E =.. .    |<br>|     o *.+ .     |<br>|    ..===.+..    |<br>+—-[SHA256]—–+</p>
+</blockquote>
+</li>
+<li><p>使用git命令复制id_rsa.pub的文件内容：</p>
+<blockquote>
+<p>$ clip &lt; ~/.ssh/id_rsa.pub</p>
+</blockquote>
+</li>
+<li><p>在github中设置ssh key，打开github账号，右上角Settings -&gt;左边SSH and GPG keys，选择New SSH key，右键粘贴 (注意确认代码前后不要留有空格)，点击Add SSH key。</p>
+</li>
+<li><p>输入 ssh -T <a href="mailto:git@github.com">git@github.com</a> 测试，显示提示：</p>
+<blockquote>
+<p>The authenticity of host ‘github.com (13.229.188.59)’ can’t be established.<br>RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspPPomTxdCARLviKw6E5S.<br>Are you sure you want to continue connecting (yes/no/[fingerprint])? yes</p>
+</blockquote>
+</li>
+<li><p>输入yes回车即可。</p>
+<blockquote>
+<p>Warning: Permanently added ‘github.com,13.229.188.59’ (RSA) to the list of known hosts.<br>Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</blockquote>
+</li>
 </ol>
 
       
@@ -352,13 +347,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2020/03/13/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%9C%8D%E5%8A%A1+PicGo%E6%9D%A5%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9B%BE%E5%BA%8A/">使用阿里云OSS服务+PicGo来搭建Hexo博客的图床</a></p>
+        <p><span>本文标题:</span><a href="/2020/03/15/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Hexo+Github搭建博客，工具安装及环境配置</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Daniel Meng</a></p>
-        <p><span>发布时间:</span>2020-03-13, 21:42:59</p>
-        <p><span>最后更新:</span>2020-03-14, 14:20:31</p>
+        <p><span>发布时间:</span>2020-03-15, 19:16:29</p>
+        <p><span>最后更新:</span>2020-03-13, 13:58:23</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2020/03/13/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%9C%8D%E5%8A%A1+PicGo%E6%9D%A5%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9B%BE%E5%BA%8A/" title="使用阿里云OSS服务+PicGo来搭建Hexo博客的图床">http://dkmplain.github.io/2020/03/13/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%9C%8D%E5%8A%A1+PicGo%E6%9D%A5%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9B%BE%E5%BA%8A/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://dkmplain.github.io/2020/03/13/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%9C%8D%E5%8A%A1+PicGo%E6%9D%A5%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9B%BE%E5%BA%8A/　　作者: Daniel Meng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2020/03/15/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" title="Hexo+Github搭建博客，工具安装及环境配置">http://dkmplain.github.io/2020/03/15/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://dkmplain.github.io/2020/03/15/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/　　作者: Daniel Meng" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -370,12 +365,12 @@
 
     <nav id="article-nav">
         
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2020/03/13/Hexo%E4%B8%BB%E9%A2%98%E5%8F%8A%E9%A1%B5%E9%9D%A2%E4%BC%98%E5%8C%96/">
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2020/03/15/Hexo%E4%B8%BB%E9%A2%98%E5%8F%8A%E9%A1%B5%E9%9D%A2%E4%BC%98%E5%8C%96/">
                     Hexo主题及页面优化
                 </a>
             </div>
+        
         
     </nav>
 
@@ -385,7 +380,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、阿里云OSS服务"><span class="toc-number">1.</span> <span class="toc-text">一、阿里云OSS服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、上传工具"><span class="toc-number">2.</span> <span class="toc-text">二、上传工具</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、工具准备"><span class="toc-number">1.</span> <span class="toc-text">一、工具准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、开始配置"><span class="toc-number">2.</span> <span class="toc-text">二、开始配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、内容推送到Github"><span class="toc-number">3.</span> <span class="toc-text">三、内容推送到Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、配置使用ssh-key免密部署"><span class="toc-number">4.</span> <span class="toc-text">四、配置使用ssh key免密部署</span></a></li></ol>
         
     </div>
     <style>
@@ -421,7 +416,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"使用阿里云OSS服务+PicGo来搭建Hexo博客的图床　| 大道至简 - Daniel Meng's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Hexo+Github搭建博客，工具安装及环境配置　| 大道至简 - Daniel Meng's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -441,19 +436,19 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2020/03/15/Hexo%E4%B8%BB%E9%A2%98%E5%8F%8A%E9%A1%B5%E9%9D%A2%E4%BC%98%E5%8C%96/" title="上一篇: Hexo主题及页面优化">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2020/03/13/Hexo%E4%B8%BB%E9%A2%98%E5%8F%8A%E9%A1%B5%E9%9D%A2%E4%BC%98%E5%8C%96/" title="下一篇: Hexo主题及页面优化">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/03/13/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%9C%8D%E5%8A%A1+PicGo%E6%9D%A5%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9B%BE%E5%BA%8A/">使用阿里云OSS服务+PicGo来搭建Hexo博客的图床</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/13/Hexo%E4%B8%BB%E9%A2%98%E5%8F%8A%E9%A1%B5%E9%9D%A2%E4%BC%98%E5%8C%96/">Hexo主题及页面优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/13/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Hexo+Github搭建博客，工具安装及环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/13/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/">使用坚果云Git仓库同步Hexo网站数据</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/03/15/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%9C%8D%E5%8A%A1+PicGo%E6%9D%A5%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9B%BE%E5%BA%8A/">使用阿里云OSS服务+PicGo来搭建Hexo博客的图床</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/15/%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91Git%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5Hexo%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/">使用坚果云Git仓库同步Hexo网站数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/15/Hexo%E4%B8%BB%E9%A2%98%E5%8F%8A%E9%A1%B5%E9%9D%A2%E4%BC%98%E5%8C%96/">Hexo主题及页面优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/15/Hexo+Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Hexo+Github搭建博客，工具安装及环境配置</a></li></ul>
 
 
 
